@@ -1,0 +1,24 @@
+nav {
+    background-color: transparent;
+    color: #d0e4f8;
+}
+
+h2 {
+    font-family: "Work Sans", Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    size: 20px;
+    line-height: 40px;
+    color: #ffffff;
+}
+
+.blog {
+    color: #FFF;
+}
+
+a:link,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+}

@@ -1,20 +1,54 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <img width="300" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<app-nav></app-nav>
+<div class="container">
+    <div class="jumbotron">
+        <h1>We Are Coming Very Soon!</h1>
+        <br/>
+        <div *ngIf="time | async as time">
+            <div class="container">
+                <div class="row d-flex justify-content-center" style="margin-left:4px;">
+                    <div class="col col-lg-1 col-sm-6 digits">{{time.days}}
+                        <div class="smalltext">DAYS</div>
+                    </div>
+                    <div class="col col-lg-1 col-sm-6 digits">{{time.hours}}
+                        <div class="smalltext">HOURS</div>
+                    </div>
+                    <div class="col col-lg-1 col-sm-6 digits">{{time.minutes}}
+                        <div class="smalltext">MINUTES</div>
+                    </div>
+                    <div class="col col-lg-1 col-sm-6 digits">{{time.seconds}}
+                        <div class="smalltext">SECONDS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <h2>
+            You do the healing, We do the running!
+        </h2>
+        <br/>
+        <div class="row d-flex justify-content-center" style="margin-left:4px;">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input type="text" class="form-control form-control-lg" placeholder="Get notify by mail" aria-label="Search for...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-secondary btn-lg" type="button" style="cursor:pointer;"><span class="send">SEND</span></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <div class="row d-flex justify-content-center" style="margin-left:4px;">
+            <ul class="social-icons">
+                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+            </ul>
+        </div>
+        <br/>
+        <div class="row justify-content-center">
+            <p class="footer">Awnics Technologies Pvt. Ltd. 2017 &copy;</p><br/>
+        </div>
+    </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<router-outlet></router-outlet>
