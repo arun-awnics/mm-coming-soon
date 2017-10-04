@@ -11,6 +11,11 @@ export interface Time {
     seconds: number;
 }
 
+/**
+ * Service to calculate time difference, i.e., countdown timer
+ * @export
+ * @class TimerService
+ */
 @Injectable()
 export class TimerService {
 

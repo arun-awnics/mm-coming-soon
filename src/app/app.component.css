@@ -1,7 +1,10 @@
+div {
+    background-color: transparent;
+}
+
 .jumbotron {
     text-align: center;
     padding: 100px 0px;
-    background-color: transparent;
     color: #ffffff;
     border: none;
     border-radius: 0px;
@@ -28,7 +31,6 @@
     font-size: 12px;
     line-height: 20px;
     color: rgba(255, 255, 255, 0.7);
-    background-color: transparent;
     font-style: normal;
     font-weight: normal;
     padding: 0px;
@@ -145,7 +147,33 @@ input {
     padding: 1px 3px;
 }
 
+.fa-wordpress {
+    padding: 1px 2px;
+}
+
 .footer {
-    margin-left: 50px;
     color: #ffffff;
+}
+
+.alert {
+    font-family: "Work Sans", Arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 23px;
+    background-color: rgba(0, 170, 255, 0.73);
+    color: #ffffff;
+    padding: 5px;
+    max-width: 50%;
+    border: none;
+    display: none;
+}
+
+.emailError {
+    padding: 5px;
+    margin: 5px;
+    color: #B10606;
+    background-color: rgba(168, 5, 5, 0.36);
+    border: none;
+    border-radius: 4px;
+    display: none;
 }
