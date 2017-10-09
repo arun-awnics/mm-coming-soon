@@ -8,6 +8,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 import { TimerService } from './shared/time.service';
 import { MailService } from './shared/mail.service';
+import { DoctorService } from './shared/doctor.service';
+import { DoctorModule } from './doctor/doctor.module';
+import { HomeModule } from './home/home.module';
 
 /**
  * AppModule
@@ -24,9 +27,11 @@ import { MailService } from './shared/mail.service';
     SharedModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    DoctorModule,
+    HomeModule
   ],
-  providers: [TimerService, MailService],
+  providers: [TimerService, MailService, DoctorService],
   bootstrap: [AppComponent]
 })
 
