@@ -4,7 +4,7 @@ div {
 
 h1 {
     margin-bottom: 20px;
-    font-size: 45px;
+    font-size: 150%;
     line-height: 1.5;
     font-family: "Work Sans", Arial, sans-serif;
     font-weight: 300;
@@ -48,7 +48,6 @@ input {
     font-weight: 300;
     font-size: 14px;
     line-height: 20px;
-    width: 50%;
 }
 
 .send {

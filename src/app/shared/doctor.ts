@@ -20,4 +20,5 @@ export class Doctor {
     appearUrl: string;
     thumbnailUrl: string;
     lastUpdatedTime: string;
+    termsAccepted: boolean;
 }
