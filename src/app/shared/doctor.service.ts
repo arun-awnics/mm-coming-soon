@@ -17,7 +17,7 @@ export class DoctorService {
      // Resolve HTTP using the constructor
      constructor (private http: Http) {}
      // private instance variable to hold base url
-     private url = 'http://localhost:3000/api/doctor';
+     private url = 'http://146.148.47.134:3000/api/doctorPost';
 
     create (body: Object): Observable<Doctor[]> {
         const bodyString = JSON.stringify(body); // Stringify payload
