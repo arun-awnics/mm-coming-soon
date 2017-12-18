@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -35,8 +34,8 @@ import { HomeModule } from './home/home.module';
   providers: [
     TimerService,
     MailService,
-    DoctorService,
-    { provide: LocationStrategy, useClass: HashLocationStrategy }],
+    DoctorService
+  ],
   bootstrap: [AppComponent]
 })
 

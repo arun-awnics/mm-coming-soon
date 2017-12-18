@@ -30,7 +30,7 @@ export class DoctorComponent {
   }
 
   generateNumber() {
-    for (let i = 0; i <= 100; i++ ) {
+    for (let i = 0; i <= 50; i++ ) {
       this.number.push(i);
     }
   }
@@ -38,13 +38,17 @@ export class DoctorComponent {
   onSubmit({ value, valid }: {value: Doctor, valid: boolean}) {
     let doctor;
     if (valid === true) {
-      console.log(JSON.stringify(value));
       this.doctorService.create(value)
-      .subscribe((res) => {doctor = res; console.log(doctor); });
+      .subscribe((res) => {doctor = res; this.msg = 'Registration successful!'; });
       this.doctor.reset();
-      this.msg = 'Registration successful';
+      setTimeout(() => {
+        document.getElementById('msg').style.display = 'none';
+      }, 5000);
     } else {
-      this.msg = 'Registration unsuccessful';
+      this.msg = 'Registration unsuccessful. Please try again later!';
+      setTimeout(() => {
+        document.getElementById('msg').style.display = 'none';
+      }, 10000);
     }
   }
 }

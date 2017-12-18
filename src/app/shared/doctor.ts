@@ -1,5 +1,4 @@
 export class Doctor {
-
     id: any;
     name: string;
     picUrl: string;

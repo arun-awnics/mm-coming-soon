@@ -1,4 +1,6 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { NavbarComponent } from './navbar.component';
 
@@ -9,8 +11,8 @@ import { NavbarComponent } from './navbar.component';
  */
 @NgModule({
   declarations: [NavbarComponent],
-  imports: [],
-  exports: [NavbarComponent]
+  imports: [CommonModule, RouterModule],
+  exports: [NavbarComponent, CommonModule, RouterModule]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {

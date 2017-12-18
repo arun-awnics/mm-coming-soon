@@ -14,6 +14,12 @@ h2 {
 
 .blog {
     color: #FFF;
+    margin: 3px;
+}
+
+.doctor {
+    color: #FFF;
+    margin: 3px;
 }
 
 a:link,
