@@ -1,6 +1,7 @@
 {
     "name": "mm-coming-soon",
-    "version": "0.0.0",
+    "version": "1.0.0",
+    "author": "Arun Gadag<arun.gadag@awnics.com>",
     "license": "MIT",
     "scripts": {
         "ng": "ng",
