@@ -36,10 +36,9 @@ export class DoctorComponent {
   }
 
   onSubmit({ value, valid }: {value: Doctor, valid: boolean}) {
-    let doctor;
     if (valid === true) {
       this.doctorService.create(value)
-      .subscribe((res) => {doctor = res; this.msg = 'Registration successful!'; });
+      .subscribe((res) => {this.msg = 'Registration successful!'; });
       this.doctor.reset();
       setTimeout(() => {
         document.getElementById('msg').style.display = 'none';

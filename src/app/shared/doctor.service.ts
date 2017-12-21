@@ -17,14 +17,14 @@ export class DoctorService {
      // Resolve HTTP using the constructor
      constructor (private http: Http) {}
      // private instance variable to hold base url
-     private url = 'http://146.148.47.134:3000/api/doctorPost';
+     private url = 'http://146.148.47.134:3000/doctorApi/controllers/insert';
 
     create (body: Object): Observable<Doctor[]> {
         const bodyString = JSON.stringify(body); // Stringify payload
         const headers = new Headers({ 'Content-Type': 'application/json' }); // ... Set content type to JSON
         const options = new RequestOptions({ headers: headers }); // Create a request option
         return this.http.post(this.url, body, options) // ...using post request
-                         .map((res: Response) => res.json() as Doctor) // ...and calling .json() on the response to return data
+                         .map((res: Response) => res.text()) // ...and calling .json() on the response to return data
                          .catch((error: any) => Observable.throw(error.json().error || 'Server error')); // ...errors if any
     }
 }

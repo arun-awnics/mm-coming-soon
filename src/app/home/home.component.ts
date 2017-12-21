@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
 
     constructor(private timerService: TimerService, private fb: FormBuilder, private mailService: MailService) {
         this.newContact = this.fb.group({
-            email: ['', Validators.email],
+            emailTo: ['', Validators.email],
             comment: [''],
             subject: [''],
             name: ['']
@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
         if (valid === true) {
             value.comment = 'There is a new request for newsletter subscription.';
             value.name = null;
-            value.subject = 'Mail subscription by ' + value.email;
+            value.subject = 'Mail subscription by ' + value.emailTo;
             this.mailService.sendMail(value)
                 .subscribe((res) => { this.msg = res; });
             this.newContact.reset();
